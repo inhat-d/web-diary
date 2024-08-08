@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEVELOPMENT > sending</title>
+    <title>Blank Page 2</title>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const userInput = document.getElementById("user-input").value;
+            document.getElementById("display-text").textContent = "You wrote: " + userInput;
+        }
+    </script>
 </head>
 <body>
-    <h1>Welcome to sending!</h1>
-    <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
+    <h1>Welcome to Blank Page 2</h1>
+    <form onsubmit="handleSubmit(event)">
         <label for="user-input">Write something:</label><br><br>
         <textarea id="user-input" name="user-input" rows="10" cols="50" placeholder="Type your text here..."></textarea><br><br>
         <button type="submit">Submit</button>
     </form>
     <br>
-    <a href="../index.html">Go back to Home page</a>
+    <p id="display-text"></p>
+    <a href="index.html">Go back to Blank Page 1</a>
 </body>
 </html>
 
