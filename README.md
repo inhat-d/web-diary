@@ -1,1 +1,1 @@
-# setuping. wait for updates!
+CONNECTION COMPLETE
