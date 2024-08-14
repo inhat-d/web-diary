@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Submissions</title>
+</head>
+<body>
+    <h1>Submitted Texts</h1>
+    <table border="1">
+        <tr>
+            <th>Nickname</th>
+            <th>Content</th>
+        </tr>
+        {% for nickname, content in submissions %}
+        <tr>
+            <td>{{ nickname }}</td>
+            <td>{{ content }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="../index.html">Go back to home page</a>
+</body>
+</html>
+

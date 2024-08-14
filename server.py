@@ -22,6 +22,14 @@ def submit():
 
     return redirect(url_for('home'))
 
+@app.route('/view')
+def view_submissions():
+    with sqlite3.connect("database.db") as conn:
+        cursor = conn.execute("SELECT nickname, content FROM submissions")
+        submissions = cursor.fetchall()
+
+    return render_template('view.html', submissions=submissions)
+
 if __name__ == '__main__':
     init_db()
     app.run(debug=True)
