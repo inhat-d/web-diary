@@ -7,15 +7,16 @@
 </head>
 <body>
     <h1>Welcome to text-box page</h1>
-    <form>
-        <label for="nickname">Enter your nickname:</label><br>
-        <input type="text" id="nickname" name="nickname" placeholder="Nickname" maxlength="20"><br><br>
-        
-        <label for="user-input">Write something:</label><br><br>
-        <textarea id="user-input" name="user-input" rows="10" cols="50" placeholder="Type your text here..."></textarea><br><br>
-        
-        <button type="submit">Submit</button>
+    <form action="http://localhost:5000/submit" method="POST">
+    	<label for="nickname">Enter your nickname:</label><br>
+    	<input type="text" id="nickname" name="nickname" placeholder="Nickname" maxlength="20"><br><br>
+    
+    	<label for="user-input">Write something:</label><br><br>
+    	<textarea id="user-input" name="user-input" rows="10" cols="50" placeholder="Type your text here..."></textarea><br><br>
+    
+    	<button type="submit">Submit</button>
     </form>
+
     <br>
     <a href="../index.html">Go back to home page</a>
 </body>
